@@ -1,4 +1,4 @@
-import React,{ Component, PropTypes } from 'react';
+import React,{ Component } from 'react';
 import './Board.css';
 
 class Board extends Component{
@@ -7,7 +7,7 @@ class Board extends Component{
     this.handleClick=this.handleClick.bind(this);
   }
   handleClick(e){
-  
+
 
     this.props.StateChangeHandle(e,e.target.id);
   }

@@ -1,4 +1,4 @@
-import React,{ Component, PropTypes } from 'react';
+import React,{ Component } from 'react';
 import Board from './Board';
 import update from 'react-addons-update';
 
@@ -78,11 +78,11 @@ class App extends Component{
       }
     }
     for(let i=0;i<9;i++){
-      if(this.state.value[i]!=0){
+      if(this.state.value[i]!==0){
         full++;
       }
     }
-    if(full==9){
+    if(full===9){
       document.body.style.backgroundColor="rgba(0,0,0,1.2)";
       document.getElementById("box").innerHTML=
       "<h1 class='drawText'>Draw!!<br/><br/><input type='button' value='regame' class='drawbtn' onClick='window.location.reload();'></h1>  ";
@@ -93,10 +93,10 @@ class App extends Component{
 
       <div id="box">
         <Board StateChangeHandle={this.StateChange}/>
-        <div id = "winnerbox"></div>
-        <br /><br />
+        <div id="winnerbox"></div>
+        <br/><br/>
         turn <br/>
-        <div id = "preview" className="boardboxs defaultbox"></div>
+        <div id="preview" className="boardboxs defaultbox"></div>
 
       </div>
 
